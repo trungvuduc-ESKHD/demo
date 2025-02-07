@@ -1,8 +1,0 @@
-{
-    "dashboard": ["admin"],
-    "delegation_login": ["admin"],
-    "absence": ["admin"],
-    "field_trip_request": ["all"],
-    "field_trip_report": ["all"],
-    "write_delegation": ["all"]
-} 

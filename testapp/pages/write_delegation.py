@@ -115,7 +115,7 @@ with col2:
 
 # Kiểm tra quyền truy cập
 auth_manager = AuthManager()
-auth_manager.check_page_access("Lưu ý") # Giữ nguyên tiếng Hàn, xem phần lưu ý
+auth_manager.check_page_access("Lưu ý")
 
 # Render sidebar
 sidebar_manager = SidebarManager()

@@ -63,53 +63,7 @@ st.markdown(
 st.markdown("---")
 
 
-    # Tab 2: Liên kết trực tiếp
-    with tab2:
-        st.write("### 🔗 Liên Kết Trực Tiếp Đến Trải Nghiệm")
-
-        # URL gốc cố định (chỉ lưu trong session, không hiển thị)
-        if 'base_url' not in st.session_state:
-            st.session_state.base_url = "https://github.com/trungvuduc-ESKHD/demo.git"
-
-        # Tạo và hiển thị liên kết (tự động)
-        col1, col2 = st.columns(2)
-
-        with col1:
-            st.write("#### Báo Cáo ")
-            request_link = f"{st.session_state.base_url}?page=camera"
-            st.text_input("Chọn và sao chép liên kết:", value=request_link, key="request_link_input", label_visibility="collapsed")
-
-        with col2:
-            st.write("#### Báo Cáo Kết Quả")
-            report_link = f"{st.session_state.base_url}?page=field_trip_report"
-            st.text_input("Chọn và sao chép liên kết:", value=report_link, key="report_link_input", label_visibility="collapsed")
-
-        # Tạo QR code (giữ nguyên)
-        if st.checkbox("Tạo Mã QR"):
-            try:
-                col1, col2 = st.columns(2)
-
-                with col1:
-                    st.write("QR Đơn Xin")
-                    qr = qrcode.QRCode(version=1, box_size=10, border=5)
-                    qr.add_data(request_link)
-                    qr.make(fit=True)
-                    img = qr.make_image(fill_color="black", back_color="white")
-                    buffered = BytesIO()
-                    img.save(buffered, format="PNG")
-                    st.image(buffered)
-
-                with col2:
-                    st.write("QR Báo Cáo")
-                    qr = qrcode.QRCode(version=1, box_size=10, border=5)
-                    qr.add_data(report_link)
-                    qr.make(fit=True)
-                    img = qr.make_image(fill_color="black", back_color="white")
-                    buffered = BytesIO()
-                    img.save(buffered, format="PNG")
-                    st.image(buffered)
-            except ImportError:
-                st.error("Vui lòng cài đặt gói 'qrcode' để tạo mã QR.")
+   
 
 # Giới thiệu chức năng cho người dùng thông thường (luôn hiển thị)
 st.markdown("---")

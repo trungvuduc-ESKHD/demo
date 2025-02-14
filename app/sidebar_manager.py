@@ -42,7 +42,7 @@ class SidebarManager:
             if st.session_state.get("authenticated", False):
                 st.markdown("### Menu Quản Lý")
                 if st.button("📝 Quản Lý Form Đăng Ký", key="delegation"):
-                    st.switch_page("pages/delegation_login.py")
+                    st.switch_page("pages/_delegation_login.py")
 
                 st.markdown("---")
         st.markdown("### Menu Chung")
@@ -58,7 +58,7 @@ class SidebarManager:
         if st.session_state.get("authenticated", False):
             if st.button("Đăng Xuất", key="logout"):
                 self.auth_manager.logout()
-                st.rerun())
+                st.rerun()
 
     def logout(self):
         st.session_state.authenticated = False

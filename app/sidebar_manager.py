@@ -37,7 +37,6 @@ class SidebarManager:
                 if st.button("📝 Quản Lý Form Đăng Ký", key="delegation"):
                     st.switch_page("pages/_delegation_login.py")
         
-                st.markdown("---")
 
             st.title("Menu")
 

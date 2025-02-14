@@ -40,18 +40,12 @@ def render():
         st.error(f"Vui lòng nhập các thông tin sau: {', '.join(missing_fields)}")
         return
 
-    # =================================================================
-    # Skip render_signature_image for templates_7
-    # =================================================================
-    if form_type != "templates_7":
-        # Xem trước đơn
-        render_signature_image(preview_only=True, form_config=form_config, form_type=form_type)
+    # Xem trước đơn
+    render_signature_image(preview_only=True, form_config=form_config, return_image=False)
 
     # Tạo và tải file PDF
     if st.button("Chuyển Đổi và Tải Đơn PDF"):
         with st.spinner("Đang chuyển đổi sang PDF..."):
-            # Check condition so only other templates use PDF generator.
-            if form_type != "templates_7":
-                pdf_generated = generate_pdf(form_config=form_config, form_type=form_type)
-                if pdf_generated:
-                    st.success("Đã sẵn sàng để tải file PDF!")
+            pdf_generated = generate_pdf(form_config=form_config)
+            if pdf_generated:
+                st.success("Đã sẵn sàng để tải file PDF!")

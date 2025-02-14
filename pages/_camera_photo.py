@@ -42,7 +42,7 @@ def handle_camera_tab(sections):
                             camera_images[key] = image_bytes
                             # Hiển thị preview
                             img = Image.open(BytesIO(image_bytes))
-                            st.image(img, caption=f"Ảnh {i+1}", use_column_width=True)
+                            st.image(img, caption=f"Ảnh {i+1}", use_container_width=True)
                         except Exception as e:
                             st.error(f"Lỗi khi xử lý ảnh {key}: {str(e)}")
                             camera_images[key] = None
@@ -214,7 +214,7 @@ def render():
                 for idx, (key, img_bytes) in enumerate(section_images.items()):
                     with cols[idx % 3]:
                         img = Image.open(BytesIO(img_bytes))
-                        st.image(img, caption=f"Ảnh {idx+1}", use_column_width=True)
+                        st.image(img, caption=f"Ảnh {idx+1}", use_container_width=True)
 
 if __name__ == "__main__":
     render()

@@ -1,20 +1,115 @@
 {
     "templates_1": {
-        "title": "Inspection Report",
-        "image_texts": [
-            ""
-        ]
+      "title": "Báo Cáo Inspection",
+      "image_path": "images/summarize.png",
+      "required_fields": [
+        "Inspection Report_supplier_name",
+        "Inspection Report_contract_number",
+        "Inspection Report_container_number",
+        "Inspection Report_partner_name",
+        "Inspection Report_total_quantity",
+        "Inspection Report_eta_date",
+        "Inspection Report_responsible_department",
+        "Inspection Report_inspection_location",
+        "Inspection Report_product_name_1",
+        "Inspection Report_size_1",
+        "Inspection Report_quantity_bag_1",
+        "Inspection Report_net_weight_1",
+        "Inspection Report_product_name_2",
+        "Inspection Report_size_2",
+        "Inspection Report_quantity_bag_2",
+        "Inspection Report_net_weight_2",
+        "Inspection Report_container_clean",
+        "Inspection Report_ventilation_ok",
+        "Inspection Report_no_leakage",
+        "Inspection Report_temp_recorder_ok",
+        "Inspection Report_package_status",
+        "Inspection Report_abnormal_smell",
+        "Inspection Report_container_temp",
+        "Inspection Report_image_1",
+        "Inspection Report_image_2"
+      ]
     },
     "templates_2": {
-        "title": "Báo Cáo 2",
-        "image_texts": [
-            ""
-        ]
+      "title": "Quality Inspection Recap",
+      "image_path": "images/quality_inspect.png",
+      "required_fields": [
+        "Quality Inspection Recap_product_name_1",
+        "Quality Inspection Recap_product_name_2",
+        "Quality Inspection Recap_size_1",
+        "Quality Inspection Recap_size_2",
+        "Quality Inspection Recap_variety_char_1",
+        "Quality Inspection Recap_variety_char_2",
+        "Quality Inspection Recap_juicy_1",
+        "Quality Inspection Recap_juicy_2",
+        "Quality Inspection Recap_brix_degree_1",
+        "Quality Inspection Recap_brix_degree_2",
+        "Quality Inspection Recap_aerage_firmness_1",
+        "Quality Inspection Recap_aerage_firmness_2",
+        "Quality Inspection Recap_average_net_weight_1",
+        "Quality Inspection Recap_average_net_weight_2",
+        "Quality Inspection Recap_target_kg_1",
+        "Quality Inspection Recap_target_kg_2",
+        "Quality Inspection Recap_status_1",
+        "Quality Inspection Recap_status_2",
+        "Quality Inspection Recap_total_serious_defects_1",
+        "Quality Inspection Recap_total_serious_defects_2",
+        "Quality Inspection Recap_total_major_defects_1",
+        "Quality Inspection Recap_total_major_defects_2",
+        "Quality Inspection Recap_total_minor_defects_1",
+        "Quality Inspection Recap_total_minor_defects_2",
+        "Quality Inspection Recap_shattering_berries_1",
+        "Quality Inspection Recap_shattering_berries_2",
+        "Quality Inspection Recap_image_1",
+        "Quality Inspection Recap_image_2"
+      ]
     },
     "templates_3": {
-        "title": "Báo Cáo",
-        "image_texts": [
-            ""
-        ]
+      "title": "Sampling Plan Green",
+      "image_path": "images/Netweight_1.png",
+      "required_fields": [
+        "Sampling Plan Green_product_name",
+        "Sampling Plan Green_size_caliber",
+        "Sampling Plan Green_sampling_plan",
+        "Sampling Plan Green_qty_of_bags",
+        "Sampling Plan Green_empty_weight_of_bag",
+        "Sampling Plan Green_total_gross_weight",
+        "Sampling Plan Green_total_net_weight",
+        "Sampling Plan Green_average_of_net_weight",
+        "Sampling Plan Green_image_1"
+      ]
+    },
+    "templates_4": {
+      "title": "Sampling Plan Black",
+      "image_path": "images/Netweight_2.png",
+      "required_fields": [
+        "Sampling Plan Black_product_name",
+        "Sampling Plan Black_size_caliber",
+        "Sampling Plan Black_sampling_plan",
+        "Sampling Plan Black_qty_of_bags",
+        "Sampling Plan Black_empty_weight_of_bag",
+        "Sampling Plan Black_total_gross_weight",
+        "Sampling Plan Black_total_net_weight",
+        "Sampling Plan Black_average_of_net_weight",
+        "Sampling Plan Black_image_1"
+      ]
+    },
+    "templates_5": {
+      "title": "Defect Assessment Green",
+      "image_path": "images/Defects_1.png",
+      "required_fields": [
+        "Defect Assessment Green_product_name",
+        "Defect Assessment Green_size",
+        "Defect Assessment Green_image_1"
+      ]
+    },
+    "templates_6": {
+      "title": "Defect Assessment Black",
+      "image_path": "images/Defects_2.png",
+      "required_fields": [
+        "Defect Assessment Black_product_name",
+        "Defect Assessment Black_size",
+        "Defect Assessment Black_image_1"
+      ]
     }
-}
+  }

@@ -46,8 +46,6 @@ def render():
     # Tạo và tải file PDF
     if st.button("Chuyển Đổi và Tải Đơn PDF"):
         with st.spinner("Đang chuyển đổi sang PDF..."):
-            # Check condition so only other templates use PDF generator.
-            if form_type != "templates_7":
-                pdf_generated = generate_pdf(form_config=form_config)
-                if pdf_generated:
-                    st.success("Đã sẵn sàng để tải file PDF!")
+            pdf_generated = generate_pdf(form_config=form_config, form_type = active_tab)
+            if pdf_generated:
+                st.success("Đã sẵn sàng để tải file PDF!")

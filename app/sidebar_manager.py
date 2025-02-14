@@ -30,20 +30,20 @@ class SidebarManager:
                         </div>
                     """, unsafe_allow_html=True)
 
-            st.markdown("### Menu Chung")
+        st.markdown("### Menu Chung")
 
             # Menu chung (luôn hiển thị)
-            if st.button("✍️ INSPECTION REPORT", key="write"):
-                st.switch_page("pages/_write_delegation.py")
-            if st.button("📝 GENERAL PHOTO", key="field_request"):
-                st.switch_page("pages/_camera_photo.py")
+        if st.button("✍️ INSPECTION REPORT", key="write"):
+            st.switch_page("pages/write_delegation.py")
+        if st.button("📝 GENERAL PHOTO", key="field_request"):
+            st.switch_page("pages/camera_photo.py")
 
-            # Nút đăng nhập/đăng xuất
-            st.markdown("---")
-            if st.session_state.get("authenticated", False):
-                if st.button("Đăng Xuất", key="logout"):
-                    self.auth_manager.logout()
-                    st.rerun()
+        # Nút đăng nhập/đăng xuất
+        st.markdown("---")
+        if st.session_state.get("authenticated", False):
+            if st.button("Đăng Xuất", key="logout"):
+                self.auth_manager.logout()
+                st.rerun()
 
     def logout(self):
         st.session_state.authenticated = False

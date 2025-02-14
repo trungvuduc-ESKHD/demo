@@ -33,8 +33,8 @@ class SidebarManager:
             st.title("Menu")
 
             # Nút về trang chủ
-            if st.button("🏠 Trang Chủ", key="home"):
-                st.switch_page("Home.py")
+            #if st.button("🏠 Trang Chủ", key="home"):
+                #st.switch_page("Home.py")
 
             st.markdown("---")
 
@@ -42,16 +42,16 @@ class SidebarManager:
             if st.session_state.get("authenticated", False):
                 st.markdown("### Menu Quản Lý")
                 if st.button("📝 Quản Lý Form Đăng Ký", key="delegation"):
-                    st.switch_page("pages/delegation_login.py")
+                    st.switch_page("pages/_delegation_login.py")
 
                 st.markdown("---")
                 st.markdown("### Menu Chung")
 
             # Menu chung (luôn hiển thị)
             if st.button("✍️ INSPECTION REPORT", key="write"):
-                st.switch_page("pages/write_delegation.py")
+                st.switch_page("pages/_write_delegation.py")
             if st.button("📝 GENERAL PHOTO", key="field_request"):
-                st.switch_page("pages/camera_photo.py")
+                st.switch_page("pages/_camera_photo.py")
 
             # Nút đăng nhập/đăng xuất
             st.markdown("---")

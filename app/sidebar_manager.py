@@ -30,13 +30,6 @@ class SidebarManager:
                         </div>
                     """, unsafe_allow_html=True)
 
-            st.title("Menu")
-
-            # Nút về trang chủ
-            if st.button("🏠 Trang Chủ", key="home"):
-                st.switch_page("Home.py")
-
-            st.markdown("---")
 
             # Cấu hình menu theo trạng thái đăng nhập
             if st.session_state.get("authenticated", False):

@@ -30,6 +30,21 @@ class SidebarManager:
                         </div>
                     """, unsafe_allow_html=True)
 
+            st.title("Menu")
+
+            # Nút về trang chủ
+            if st.button("🏠 Trang Chủ", key="_home"):
+                st.switch_page("Home.py")
+
+            st.markdown("---")
+
+            # Cấu hình menu theo trạng thái đăng nhập
+            if st.session_state.get("authenticated", False):
+                st.markdown("### Menu Quản Lý")
+                if st.button("📝 Quản Lý Form Đăng Ký", key="delegation"):
+                    st.switch_page("pages/delegation_login.py")
+
+                st.markdown("---")
         st.markdown("### Menu Chung")
 
             # Menu chung (luôn hiển thị)
@@ -43,7 +58,7 @@ class SidebarManager:
         if st.session_state.get("authenticated", False):
             if st.button("Đăng Xuất", key="logout"):
                 self.auth_manager.logout()
-                st.rerun()
+                st.rerun())
 
     def logout(self):
         st.session_state.authenticated = False

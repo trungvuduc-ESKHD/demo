@@ -13,14 +13,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Kiểm tra tham số URL và chuyển hướng
-query_params = st.query_params
-redirect_to = query_params.get("page", None)
-
-if redirect_to:
-    if redirect_to == "field_trip_request":
-        st.switch_page("pages/_camera_photo.py")
-
 # Khởi tạo trạng thái phiên
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False

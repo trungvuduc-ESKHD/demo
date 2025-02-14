@@ -36,8 +36,16 @@ class SidebarManager:
                 st.markdown("### Menu Quản Lý")
                 if st.button("📝 Quản Lý Form Đăng Ký", key="delegation"):
                     st.switch_page("pages/_delegation_login.py")
-
+        
                 st.markdown("---")
+
+            st.title("Menu")
+
+            # Nút về trang chủ
+            if st.button("🏠 Trang Chủ", key="home"):
+                st.switch_page("Home.py")
+
+            st.markdown("---")
             st.markdown("### Menu Chung")
 
             # Menu chung (luôn hiển thị)

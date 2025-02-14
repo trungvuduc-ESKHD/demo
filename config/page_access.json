@@ -1,0 +1,7 @@
+{
+    "dashboard": ["admin"],
+    "delegation_login": ["admin"],
+    "absence": ["admin"],
+    "field_trip_request": ["all"],
+    "write_delegation": ["all"]
+} 

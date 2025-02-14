@@ -7,11 +7,11 @@ def create_text_input(tab_name, label, key, default_value=""):
             st.session_state[full_key] = default_value
         return st.text_input(label, key=full_key)
 
-def create_date_input(tab_name, label, key):
-        full_key = f"{tab_name}_{key}"
-        if full_key not in st.session_state:
-            st.session_state[full_key] = None  # Or some default date
-        return st.date_input
+def create_date_input(tab_name, label, key, default_value=None):
+    full_key = f"{tab_name}_{key}"
+    if full_key not in st.session_state:
+        st.session_state[full_key] = default_value  # Or some default date
+    return st.date_input(label, key=full_key) # Fix
 
 def create_number_input(tab_name, label, key, default_value=0.0):
         full_key = f"{tab_name}_{key}"
@@ -71,24 +71,20 @@ def render():
         with col2:
             create_text_input("Inspection Report", "Tên khách hàng / Partner's name", "partner_name")
             create_text_input("Inspection Report", "Tổng lượng kiện được nhận / Received total quantity (carton)", "total_quantity")
-            create_date_input("Inspection Report", "Ngày hàng đến/ ETA", "eta_date")
+            eta_date = create_date_input("Inspection Report", "Ngày hàng đến/ ETA", "eta_date")
             create_text_input("Inspection Report", "Kiểm hàng bởi / Inspected by", "inspected_by")
-            create_date_input("Inspection Report", "Ngày kiểm hàng / Inspection date", "str_date")
+            str_date = create_date_input("Inspection Report", "Ngày kiểm hàng / Inspection date", "str_date")
 
         st.subheader("Product Information")
         col3, col4, col5, col6 = st.columns(4)
         with col3:
             create_text_input("Inspection Report", "Tên sản phẩm 1 / Product name", "product_name_1", default_value="FRESH GREEN GRAPES")
-            #create_text_input("Inspection Report", "Tên sản phẩm 2 / Product name", "product_name_2", default_value="FRESH BLACK GRAPES")
         with col4:
             create_text_input("Inspection Report", "Kích cỡ / Size", "size_1")
-            #create_text_input("Inspection Report", "Kích cỡ / Size", "size_2")
         with col5:
             create_text_input("Inspection Report", "Số lượng túi được nhận", "quantity_bag_1")
-            #create_text_input("Inspection Report", "Số lượng túi được nhận", "quantity_bag_2")
         with col6:
             create_text_input("Inspection Report", "Net Weight of one bag as request (Kgs)", "net_weight_1")
-            #create_text_input("Inspection Report", "Net Weight of one bag as request (Kgs)", "net_weight_2")
         st.subheader("Container Status")
         create_text_input("Inspection Report", "Phương tiện sạch sẽ? / Container is clean?", "container_clean")
         create_text_input("Inspection Report", "Hệ thống thông gió hoạt động tốt? / Ventilation system is ok?", "ventilation_ok")

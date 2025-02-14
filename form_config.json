@@ -15,10 +15,6 @@
         "Inspection Report_size_1",
         "Inspection Report_quantity_bag_1",
         "Inspection Report_net_weight_1",
-        "Inspection Report_product_name_2",
-        "Inspection Report_size_2",
-        "Inspection Report_quantity_bag_2",
-        "Inspection Report_net_weight_2",
         "Inspection Report_container_clean",
         "Inspection Report_ventilation_ok",
         "Inspection Report_no_leakage",
@@ -26,8 +22,7 @@
         "Inspection Report_package_status",
         "Inspection Report_abnormal_smell",
         "Inspection Report_container_temp",
-        "Inspection Report_image_1",
-        "Inspection Report_image_2"
+        "Inspection Report_image_1"
       ]
     },
     "templates_2": {
